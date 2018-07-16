@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { StyleSheet, Text, TextInput, View, ScrollView} from 'react-native';
+import { StyleSheet, Text, TextInput, View, ScrollView, TouchableOpacity} from 'react-native';
 
 export default class App extends React.Component {
     render() {
@@ -16,7 +16,7 @@ export default class App extends React.Component {
                 <View style={styles.footer}>
                     <TextInput
                         style={styles.textInput}
-                        placeholder='note'
+                        placeholder='>note'
                         placeholderTextColor = 'white'
                         underlineColorAndroid = 'transparent'>
                     </TextInput>
@@ -48,13 +48,38 @@ const styles = StyleSheet.create({
 
     },
     scrollContainer: {
-
+        flex:1,
+        marginBottom: 100
     },
     footer: {
-
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        right:0,
+        zIndex: 10,
     },
     textInput: {
-
+        alignSelf: 'stretch',
+        color: '#fff',
+        padding: 20,
+        backgroundColor: '#252525'
+    },
+    addButton: {
+        position: 'absolute',
+        zIndex: 11,
+        right: 20,
+        bottom: 90,
+        width: 90,
+        height: 90,
+        borderRadius: 50,
+        alignItems: 'center',
+        justifyContent: 'center',
+        elevation: 8, 
+        backgroundColor: '#E91E63'
+    },
+    addButtonText: {
+        color: '#fff',
+        fontSize: 25
     }
 
 });
